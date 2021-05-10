@@ -7,6 +7,7 @@
          Scanner userInput = new Scanner(System.in);
          char userLetter = chooseUserLetter(userInput);
          char computerLetter = (userLetter == 'X') ? 'O' : 'X';
+			displayBoard(board);
 			}
 
 			private static char[] createBoard() {
@@ -21,4 +22,9 @@
 				System.out.print("Choose your Letter: ");
 				return userInput.next().toUpperCase().charAt(0);
 	 	}
+			public static void displayBoard(char[] board) {
+			System.out.println("1" + "|" + "2" + "|" + "3");
+         System.out.println("4" + "|" + "5" + "|" + "6");
+         System.out.println("7" + "|" + "8" + "|" + "9");
+	}
 }
